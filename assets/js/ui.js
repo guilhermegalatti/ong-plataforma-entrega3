@@ -1,0 +1,4 @@
+export const $=(s,c=document)=>c.querySelector(s);export const $$=(s,c=document)=>Array.from(c.querySelectorAll(s));
+export function el(t,a={},ch=[]){const e=document.createElement(t);Object.entries(a||{}).forEach(([k,v])=>{if(k.startsWith('on')&&typeof v==='function')e.addEventListener(k.slice(2),v);else if(k==='class')e.className=v;else if(v!==undefined&&v!==null)e.setAttribute(k,v)});(Array.isArray(ch)?ch:[ch]).forEach(c=>{if(c==null)return;e.appendChild(typeof c==='string'?document.createTextNode(c):c)});return e}
+export function render(t,h){if(typeof h==='string')t.innerHTML=h;else if(h instanceof Element)t.replaceChildren(h);else t.textContent='';}
+export function fmtMoney(v){return new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(v||0);}

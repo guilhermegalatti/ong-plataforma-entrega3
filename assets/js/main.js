@@ -1,0 +1,1 @@
+import { bootstrap } from './app.js';import './components/Toast.js';import './components/Modal.js';window.addEventListener('DOMContentLoaded', bootstrap);

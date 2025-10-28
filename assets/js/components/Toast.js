@@ -1,0 +1,1 @@
+export function showToast(msg='Ação realizada!',ms=3000){let t=document.getElementById('toast-global');if(!t){t=document.createElement('div');t.id='toast-global';t.className='toast';document.body.appendChild(t)}t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),ms)}
